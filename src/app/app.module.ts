@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
-
+import { effectsArr } from './store/effects';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { appReducers } from './store/app.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from './../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ BrowserModule,
       maxAge: 25,
       logOnly: environment.production
     }),
+    EffectsModule.forRoot(effectsArr),
     RouterModule
   ],
   providers: [],

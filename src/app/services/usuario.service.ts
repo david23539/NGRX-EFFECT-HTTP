@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 })
 export class UsuarioService {
 
-  private url = 'https://reqres.in/api';
+  private url = 'https://aaaaaa-reqres.in/api';
   constructor( private http: HttpClient) { }
 
   getUser () {
